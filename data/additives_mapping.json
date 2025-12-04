@@ -1,0 +1,812 @@
+{
+  "E100": {
+    "name": "Curcumin",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural yellow color from turmeric"
+  },
+  "E101": {
+    "name": "Riboflavin (Vitamin B2)",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural yellow color, also a vitamin"
+  },
+  "E102": {
+    "name": "Tartrazine",
+    "concern": "Moderate",
+    "category": "Color",
+    "description": "Yellow synthetic dye, may cause hyperactivity in children"
+  },
+  "E104": {
+    "name": "Quinoline Yellow",
+    "concern": "Moderate",
+    "category": "Color",
+    "description": "Synthetic yellow-green dye"
+  },
+  "E110": {
+    "name": "Sunset Yellow FCF",
+    "concern": "Moderate",
+    "category": "Color",
+    "description": "Orange-yellow synthetic dye, linked to hyperactivity"
+  },
+  "E120": {
+    "name": "Cochineal / Carminic acid",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural red dye from insects"
+  },
+  "E122": {
+    "name": "Azorubine / Carmoisine",
+    "concern": "Moderate",
+    "category": "Color",
+    "description": "Red synthetic dye"
+  },
+  "E124": {
+    "name": "Ponceau 4R",
+    "concern": "Moderate",
+    "category": "Color",
+    "description": "Red synthetic dye, may cause hyperactivity"
+  },
+  "E129": {
+    "name": "Allura Red AC",
+    "concern": "Moderate",
+    "category": "Color",
+    "description": "Red synthetic dye, linked to hyperactivity in children"
+  },
+  "E131": {
+    "name": "Patent Blue V",
+    "concern": "Moderate",
+    "category": "Color",
+    "description": "Blue synthetic dye"
+  },
+  "E132": {
+    "name": "Indigotine / Indigo Carmine",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Blue synthetic dye, generally considered safe"
+  },
+  "E133": {
+    "name": "Brilliant Blue FCF",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Blue synthetic dye"
+  },
+  "E140": {
+    "name": "Chlorophylls",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural green color from plants"
+  },
+  "E141": {
+    "name": "Copper complexes of chlorophylls",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Green color, copper-stabilized chlorophyll"
+  },
+  "E150a": {
+    "name": "Plain Caramel",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural caramel color from heating sugars"
+  },
+  "E150b": {
+    "name": "Caustic Sulphite Caramel",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Caramel color processed with sulfites"
+  },
+  "E150c": {
+    "name": "Ammonia Caramel",
+    "concern": "Moderate",
+    "category": "Color",
+    "description": "Caramel color processed with ammonia"
+  },
+  "E150d": {
+    "name": "Sulphite Ammonia Caramel",
+    "concern": "Moderate",
+    "category": "Color",
+    "description": "Caramel color (Class IV), contains 4-MEI which may be carcinogenic in high doses"
+  },
+  "E160a": {
+    "name": "Carotenes",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural orange color from carrots"
+  },
+  "E160b": {
+    "name": "Annatto",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural orange-red color from seeds"
+  },
+  "E160c": {
+    "name": "Paprika extract",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural red color from paprika"
+  },
+  "E160d": {
+    "name": "Lycopene",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural red color from tomatoes"
+  },
+  "E161b": {
+    "name": "Lutein",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural yellow color, beneficial for eyes"
+  },
+  "E162": {
+    "name": "Beetroot Red",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural red color from beetroot"
+  },
+  "E163": {
+    "name": "Anthocyanins",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "Natural purple/red colors from fruits"
+  },
+  "E170": {
+    "name": "Calcium carbonate",
+    "concern": "Minimal",
+    "category": "Color",
+    "description": "White color, also used as calcium supplement"
+  },
+  "E171": {
+    "name": "Titanium dioxide",
+    "concern": "High",
+    "category": "Color",
+    "description": "White color, banned in EU since 2022 due to genotoxicity concerns"
+  },
+  "E200": {
+    "name": "Sorbic acid",
+    "concern": "Minimal",
+    "category": "Preservative",
+    "description": "Natural preservative, generally safe"
+  },
+  "E202": {
+    "name": "Potassium sorbate",
+    "concern": "Minimal",
+    "category": "Preservative",
+    "description": "Common preservative, generally safe"
+  },
+  "E210": {
+    "name": "Benzoic acid",
+    "concern": "Moderate",
+    "category": "Preservative",
+    "description": "Preservative, may cause reactions in sensitive individuals"
+  },
+  "E211": {
+    "name": "Sodium benzoate",
+    "concern": "Moderate",
+    "category": "Preservative",
+    "description": "Preservative, may form benzene when combined with vitamin C"
+  },
+  "E212": {
+    "name": "Potassium benzoate",
+    "concern": "Moderate",
+    "category": "Preservative",
+    "description": "Similar concerns as sodium benzoate"
+  },
+  "E220": {
+    "name": "Sulphur dioxide",
+    "concern": "Moderate",
+    "category": "Preservative",
+    "description": "Preservative, can trigger asthma in sensitive individuals"
+  },
+  "E221": {
+    "name": "Sodium sulphite",
+    "concern": "Moderate",
+    "category": "Preservative",
+    "description": "Preservative, sulfite sensitivity possible"
+  },
+  "E223": {
+    "name": "Sodium metabisulphite",
+    "concern": "Moderate",
+    "category": "Preservative",
+    "description": "Preservative, sulfite sensitivity possible"
+  },
+  "E224": {
+    "name": "Potassium metabisulphite",
+    "concern": "Moderate",
+    "category": "Preservative",
+    "description": "Preservative, sulfite sensitivity possible"
+  },
+  "E249": {
+    "name": "Potassium nitrite",
+    "concern": "High",
+    "category": "Preservative",
+    "description": "Curing agent, may form carcinogenic nitrosamines"
+  },
+  "E250": {
+    "name": "Sodium nitrite",
+    "concern": "High",
+    "category": "Preservative",
+    "description": "Curing agent in processed meats, may form carcinogenic nitrosamines"
+  },
+  "E251": {
+    "name": "Sodium nitrate",
+    "concern": "High",
+    "category": "Preservative",
+    "description": "Curing agent, converts to nitrite"
+  },
+  "E252": {
+    "name": "Potassium nitrate",
+    "concern": "High",
+    "category": "Preservative",
+    "description": "Curing agent, converts to nitrite"
+  },
+  "E270": {
+    "name": "Lactic acid",
+    "concern": "Minimal",
+    "category": "Preservative",
+    "description": "Natural acid, generally safe"
+  },
+  "E280": {
+    "name": "Propionic acid",
+    "concern": "Minimal",
+    "category": "Preservative",
+    "description": "Preservative in bread, generally safe"
+  },
+  "E281": {
+    "name": "Sodium propionate",
+    "concern": "Minimal",
+    "category": "Preservative",
+    "description": "Bread preservative, generally safe"
+  },
+  "E282": {
+    "name": "Calcium propionate",
+    "concern": "Minimal",
+    "category": "Preservative",
+    "description": "Bread preservative, generally safe"
+  },
+  "E296": {
+    "name": "Malic acid",
+    "concern": "Minimal",
+    "category": "Acidity regulator",
+    "description": "Natural fruit acid"
+  },
+  "E297": {
+    "name": "Fumaric acid",
+    "concern": "Minimal",
+    "category": "Acidity regulator",
+    "description": "Natural acid, generally safe"
+  },
+  "E300": {
+    "name": "Ascorbic acid (Vitamin C)",
+    "concern": "Minimal",
+    "category": "Antioxidant",
+    "description": "Vitamin C, beneficial antioxidant"
+  },
+  "E301": {
+    "name": "Sodium ascorbate",
+    "concern": "Minimal",
+    "category": "Antioxidant",
+    "description": "Vitamin C salt, generally safe"
+  },
+  "E306": {
+    "name": "Tocopherols (Vitamin E)",
+    "concern": "Minimal",
+    "category": "Antioxidant",
+    "description": "Natural vitamin E"
+  },
+  "E307": {
+    "name": "Alpha-tocopherol",
+    "concern": "Minimal",
+    "category": "Antioxidant",
+    "description": "Vitamin E, antioxidant"
+  },
+  "E310": {
+    "name": "Propyl gallate",
+    "concern": "Moderate",
+    "category": "Antioxidant",
+    "description": "Synthetic antioxidant"
+  },
+  "E319": {
+    "name": "TBHQ",
+    "concern": "Moderate",
+    "category": "Antioxidant",
+    "description": "Synthetic antioxidant in oils and fats"
+  },
+  "E320": {
+    "name": "BHA (Butylated hydroxyanisole)",
+    "concern": "High",
+    "category": "Antioxidant",
+    "description": "Synthetic antioxidant, possible carcinogen"
+  },
+  "E321": {
+    "name": "BHT (Butylated hydroxytoluene)",
+    "concern": "Moderate",
+    "category": "Antioxidant",
+    "description": "Synthetic antioxidant, some safety concerns"
+  },
+  "E322": {
+    "name": "Lecithins",
+    "concern": "Minimal",
+    "category": "Emulsifier",
+    "description": "Natural emulsifier from soy or eggs"
+  },
+  "E325": {
+    "name": "Sodium lactate",
+    "concern": "Minimal",
+    "category": "Acidity regulator",
+    "description": "Natural salt, generally safe"
+  },
+  "E330": {
+    "name": "Citric acid",
+    "concern": "Minimal",
+    "category": "Acidity regulator",
+    "description": "Natural fruit acid, very common and safe"
+  },
+  "E331": {
+    "name": "Sodium citrates",
+    "concern": "Minimal",
+    "category": "Acidity regulator",
+    "description": "Citric acid salt, generally safe"
+  },
+  "E332": {
+    "name": "Potassium citrates",
+    "concern": "Minimal",
+    "category": "Acidity regulator",
+    "description": "Citric acid salt, generally safe"
+  },
+  "E333": {
+    "name": "Calcium citrates",
+    "concern": "Minimal",
+    "category": "Acidity regulator",
+    "description": "Calcium source, generally safe"
+  },
+  "E334": {
+    "name": "Tartaric acid",
+    "concern": "Minimal",
+    "category": "Acidity regulator",
+    "description": "Natural acid from grapes"
+  },
+  "E338": {
+    "name": "Phosphoric acid",
+    "concern": "Moderate",
+    "category": "Acidity regulator",
+    "description": "Common in cola drinks, may affect calcium absorption"
+  },
+  "E339": {
+    "name": "Sodium phosphates",
+    "concern": "Moderate",
+    "category": "Acidity regulator",
+    "description": "Phosphate additive, high intake may be concerning"
+  },
+  "E340": {
+    "name": "Potassium phosphates",
+    "concern": "Moderate",
+    "category": "Acidity regulator",
+    "description": "Phosphate additive"
+  },
+  "E341": {
+    "name": "Calcium phosphates",
+    "concern": "Minimal",
+    "category": "Acidity regulator",
+    "description": "Calcium and phosphate source"
+  },
+  "E385": {
+    "name": "Calcium disodium EDTA",
+    "concern": "Moderate",
+    "category": "Sequestrant",
+    "description": "Preservative, binds metals"
+  },
+  "E392": {
+    "name": "Rosemary extract",
+    "concern": "Minimal",
+    "category": "Antioxidant",
+    "description": "Natural antioxidant"
+  },
+  "E400": {
+    "name": "Alginic acid",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Natural thickener from seaweed"
+  },
+  "E401": {
+    "name": "Sodium alginate",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Natural thickener from seaweed"
+  },
+  "E406": {
+    "name": "Agar",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Natural gelling agent from seaweed"
+  },
+  "E407": {
+    "name": "Carrageenan",
+    "concern": "Moderate",
+    "category": "Thickener",
+    "description": "Seaweed extract, some concerns about gut inflammation"
+  },
+  "E410": {
+    "name": "Locust bean gum",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Natural thickener from carob seeds"
+  },
+  "E412": {
+    "name": "Guar gum",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Natural thickener from guar beans"
+  },
+  "E414": {
+    "name": "Acacia gum (Gum arabic)",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Natural gum, generally safe"
+  },
+  "E415": {
+    "name": "Xanthan gum",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Common thickener, generally safe"
+  },
+  "E420": {
+    "name": "Sorbitol",
+    "concern": "Minimal",
+    "category": "Sweetener",
+    "description": "Sugar alcohol, may cause digestive issues in large amounts"
+  },
+  "E421": {
+    "name": "Mannitol",
+    "concern": "Minimal",
+    "category": "Sweetener",
+    "description": "Sugar alcohol, may cause digestive issues"
+  },
+  "E422": {
+    "name": "Glycerol",
+    "concern": "Minimal",
+    "category": "Humectant",
+    "description": "Natural humectant, generally safe"
+  },
+  "E432": {
+    "name": "Polysorbate 20",
+    "concern": "Moderate",
+    "category": "Emulsifier",
+    "description": "Synthetic emulsifier"
+  },
+  "E433": {
+    "name": "Polysorbate 80",
+    "concern": "Moderate",
+    "category": "Emulsifier",
+    "description": "Synthetic emulsifier, some gut health concerns"
+  },
+  "E435": {
+    "name": "Polysorbate 60",
+    "concern": "Moderate",
+    "category": "Emulsifier",
+    "description": "Synthetic emulsifier"
+  },
+  "E436": {
+    "name": "Polysorbate 65",
+    "concern": "Moderate",
+    "category": "Emulsifier",
+    "description": "Synthetic emulsifier, used in ice cream and desserts"
+  },
+  "E440": {
+    "name": "Pectins",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Natural fiber from fruits"
+  },
+  "E450": {
+    "name": "Diphosphates",
+    "concern": "Moderate",
+    "category": "Raising agent",
+    "description": "Phosphate additive"
+  },
+  "E451": {
+    "name": "Triphosphates",
+    "concern": "Moderate",
+    "category": "Stabilizer",
+    "description": "Phosphate additive"
+  },
+  "E452": {
+    "name": "Polyphosphates",
+    "concern": "Moderate",
+    "category": "Stabilizer",
+    "description": "Phosphate additive, common in processed meats"
+  },
+  "E460": {
+    "name": "Cellulose",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Plant fiber, generally safe"
+  },
+  "E461": {
+    "name": "Methyl cellulose",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Modified cellulose"
+  },
+  "E466": {
+    "name": "Carboxymethyl cellulose",
+    "concern": "Moderate",
+    "category": "Thickener",
+    "description": "Modified cellulose, some gut health concerns"
+  },
+  "E471": {
+    "name": "Mono- and diglycerides of fatty acids",
+    "concern": "Minimal",
+    "category": "Emulsifier",
+    "description": "Common emulsifier, generally safe"
+  },
+  "E472a": {
+    "name": "Acetic acid esters of mono- and diglycerides",
+    "concern": "Minimal",
+    "category": "Emulsifier",
+    "description": "Modified fats"
+  },
+  "E472b": {
+    "name": "Lactic acid esters of mono- and diglycerides",
+    "concern": "Minimal",
+    "category": "Emulsifier",
+    "description": "Modified fats"
+  },
+  "E472e": {
+    "name": "DATEM",
+    "concern": "Minimal",
+    "category": "Emulsifier",
+    "description": "Dough conditioner"
+  },
+  "E476": {
+    "name": "Polyglycerol polyricinoleate",
+    "concern": "Minimal",
+    "category": "Emulsifier",
+    "description": "Emulsifier in chocolate"
+  },
+  "E481": {
+    "name": "Sodium stearoyl lactylate",
+    "concern": "Minimal",
+    "category": "Emulsifier",
+    "description": "Bread improver"
+  },
+  "E500": {
+    "name": "Sodium carbonates",
+    "concern": "Minimal",
+    "category": "Raising agent",
+    "description": "Baking soda, generally safe"
+  },
+  "E501": {
+    "name": "Potassium carbonates",
+    "concern": "Minimal",
+    "category": "Raising agent",
+    "description": "Similar to baking soda"
+  },
+  "E503": {
+    "name": "Ammonium carbonates",
+    "concern": "Minimal",
+    "category": "Raising agent",
+    "description": "Traditional leavening agent"
+  },
+  "E508": {
+    "name": "Potassium chloride",
+    "concern": "Minimal",
+    "category": "Salt substitute",
+    "description": "Salt alternative"
+  },
+  "E509": {
+    "name": "Calcium chloride",
+    "concern": "Minimal",
+    "category": "Firming agent",
+    "description": "Used in canned vegetables"
+  },
+  "E516": {
+    "name": "Calcium sulphate",
+    "concern": "Minimal",
+    "category": "Firming agent",
+    "description": "Used in tofu making"
+  },
+  "E621": {
+    "name": "Monosodium glutamate (MSG)",
+    "concern": "Moderate",
+    "category": "Flavor enhancer",
+    "description": "Flavor enhancer, may cause sensitivity in some people"
+  },
+  "E627": {
+    "name": "Disodium guanylate",
+    "concern": "Moderate",
+    "category": "Flavor enhancer",
+    "description": "Flavor enhancer, often used with MSG"
+  },
+  "E631": {
+    "name": "Disodium inosinate",
+    "concern": "Moderate",
+    "category": "Flavor enhancer",
+    "description": "Flavor enhancer, often used with MSG"
+  },
+  "E635": {
+    "name": "Disodium ribonucleotides",
+    "concern": "Moderate",
+    "category": "Flavor enhancer",
+    "description": "Flavor enhancer combination"
+  },
+  "E900": {
+    "name": "Dimethylpolysiloxane",
+    "concern": "Minimal",
+    "category": "Anti-foaming agent",
+    "description": "Silicone-based anti-foaming agent"
+  },
+  "E901": {
+    "name": "Beeswax",
+    "concern": "Minimal",
+    "category": "Glazing agent",
+    "description": "Natural wax"
+  },
+  "E903": {
+    "name": "Carnauba wax",
+    "concern": "Minimal",
+    "category": "Glazing agent",
+    "description": "Natural plant wax"
+  },
+  "E904": {
+    "name": "Shellac",
+    "concern": "Minimal",
+    "category": "Glazing agent",
+    "description": "Natural resin from lac beetles"
+  },
+  "E920": {
+    "name": "L-Cysteine",
+    "concern": "Minimal",
+    "category": "Flour treatment agent",
+    "description": "Amino acid, used in bread"
+  },
+  "E950": {
+    "name": "Acesulfame K",
+    "concern": "Moderate",
+    "category": "Sweetener",
+    "description": "Artificial sweetener, some health concerns debated"
+  },
+  "E951": {
+    "name": "Aspartame",
+    "concern": "Moderate",
+    "category": "Sweetener",
+    "description": "Artificial sweetener, controversial but generally considered safe in normal amounts"
+  },
+  "E952": {
+    "name": "Cyclamate",
+    "concern": "High",
+    "category": "Sweetener",
+    "description": "Artificial sweetener, banned in some countries"
+  },
+  "E954": {
+    "name": "Saccharin",
+    "concern": "Moderate",
+    "category": "Sweetener",
+    "description": "Artificial sweetener, historical cancer concerns resolved"
+  },
+  "E955": {
+    "name": "Sucralose",
+    "concern": "Moderate",
+    "category": "Sweetener",
+    "description": "Artificial sweetener, generally considered safe but some gut health concerns"
+  },
+  "E960": {
+    "name": "Steviol glycosides",
+    "concern": "Minimal",
+    "category": "Sweetener",
+    "description": "Natural sweetener from stevia plant"
+  },
+  "E961": {
+    "name": "Neotame",
+    "concern": "Moderate",
+    "category": "Sweetener",
+    "description": "Artificial sweetener similar to aspartame"
+  },
+  "E965": {
+    "name": "Maltitol",
+    "concern": "Minimal",
+    "category": "Sweetener",
+    "description": "Sugar alcohol, may cause digestive issues"
+  },
+  "E966": {
+    "name": "Lactitol",
+    "concern": "Minimal",
+    "category": "Sweetener",
+    "description": "Sugar alcohol from milk sugar"
+  },
+  "E967": {
+    "name": "Xylitol",
+    "concern": "Minimal",
+    "category": "Sweetener",
+    "description": "Sugar alcohol, beneficial for dental health"
+  },
+  "E968": {
+    "name": "Erythritol",
+    "concern": "Minimal",
+    "category": "Sweetener",
+    "description": "Sugar alcohol, well tolerated"
+  },
+  "E999": {
+    "name": "Quillaia extract",
+    "concern": "Minimal",
+    "category": "Foaming agent",
+    "description": "Natural foaming agent"
+  },
+  "E1200": {
+    "name": "Polydextrose",
+    "concern": "Minimal",
+    "category": "Bulking agent",
+    "description": "Fiber substitute"
+  },
+  "E1400": {
+    "name": "Dextrin",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Modified starch"
+  },
+  "E1404": {
+    "name": "Oxidised starch",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Modified starch"
+  },
+  "E1410": {
+    "name": "Monostarch phosphate",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Modified starch"
+  },
+  "E1412": {
+    "name": "Distarch phosphate",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Modified starch"
+  },
+  "E1414": {
+    "name": "Acetylated distarch phosphate",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Modified starch"
+  },
+  "E1420": {
+    "name": "Acetylated starch",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Modified starch"
+  },
+  "E1422": {
+    "name": "Acetylated distarch adipate",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Modified starch"
+  },
+  "E1442": {
+    "name": "Hydroxy propyl distarch phosphate",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Modified starch"
+  },
+  "E1450": {
+    "name": "Starch sodium octenyl succinate",
+    "concern": "Minimal",
+    "category": "Thickener",
+    "description": "Modified starch"
+  },
+  "E1505": {
+    "name": "Triethyl citrate",
+    "concern": "Minimal",
+    "category": "Stabilizer",
+    "description": "Citric acid ester"
+  },
+  "E1520": {
+    "name": "Propylene glycol",
+    "concern": "Moderate",
+    "category": "Humectant",
+    "description": "Moisture retainer, generally safe in food amounts"
+  },
+  "Sucralose": {
+    "name": "Sucralose",
+    "concern": "Moderate",
+    "category": "Sweetener",
+    "description": "Same as E955, artificial sweetener"
+  }
+}
