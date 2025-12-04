@@ -1,0 +1,201 @@
+[
+  {
+    "name": "Margherita Pizza",
+    "cuisine": "Italian",
+    "aliases": ["classic pizza", "neapolitan pizza"],
+    "ingredient_keywords": [
+      "tomato",
+      "mozzarella",
+      "basil",
+      "olive oil",
+      "wheat flour",
+      "pizza dough"
+    ],
+    "required_terms": ["tomato", "mozzarella"],
+    "category_keywords": ["pizza", "flatbread"],
+    "hero_ingredients": ["tomato", "mozzarella", "basil"],
+    "description": "Classic Neapolitan pie built on tomato sauce, fresh mozzarella, basil, and olive oil.",
+    "recipe_url": "https://www.seriouseats.com/classic-margherita-pizza-recipe",
+    "serving_style": "Baked main"
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "cuisine": "Indian",
+    "aliases": ["tikka masala", "butter chicken"],
+    "ingredient_keywords": [
+      "chicken",
+      "yogurt",
+      "garam masala",
+      "cumin",
+      "coriander",
+      "tomato",
+      "cream",
+      "spices"
+    ],
+    "required_terms": ["tikka", "masala"],
+    "category_keywords": ["indian dishes", "curries"],
+    "hero_ingredients": ["garam masala", "tomato", "cream"],
+    "description": "Creamy tomato-based curry with yogurt-marinated chicken and warm spices.",
+    "recipe_url": "https://www.bbcgoodfood.com/recipes/chicken-tikka-masala",
+    "serving_style": "Stewed main"
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "cuisine": "Italian",
+    "aliases": ["bolognese", "ragu"],
+    "ingredient_keywords": [
+      "spaghetti",
+      "tomato",
+      "beef",
+      "carrot",
+      "celery",
+      "onion",
+      "olive oil",
+      "garlic"
+    ],
+    "required_terms": ["tomato", "beef"],
+    "category_keywords": ["pasta", "italian dishes"],
+    "hero_ingredients": ["tomato", "beef", "onion"],
+    "description": "Slow-simmered meat sauce served over spaghetti with aromatic soffritto.",
+    "recipe_url": "https://www.bbcgoodfood.com/recipes/spaghetti-bolognese",
+    "serving_style": "Pasta main"
+  },
+  {
+    "name": "Caesar Salad",
+    "cuisine": "Californian-Italian",
+    "aliases": ["classic caesar"],
+    "ingredient_keywords": [
+      "romaine",
+      "parmesan",
+      "anchovy",
+      "crouton",
+      "egg",
+      "lemon",
+      "garlic"
+    ],
+    "required_terms": ["romaine"],
+    "category_keywords": ["salad", "greens"],
+    "hero_ingredients": ["romaine", "parmesan", "anchovy"],
+    "description": "Romaine lettuce salad tossed with anchovy-garlic dressing, parmesan, and croutons.",
+    "recipe_url": "https://www.seriouseats.com/perfect-caesar-salad-recipe",
+    "serving_style": "Cold salad"
+  },
+  {
+    "name": "Pad Thai",
+    "cuisine": "Thai",
+    "aliases": ["thai stir-fry noodles"],
+    "ingredient_keywords": [
+      "rice noodle",
+      "tamarind",
+      "fish sauce",
+      "palm sugar",
+      "peanut",
+      "shrimp",
+      "tofu",
+      "bean sprout"
+    ],
+    "required_terms": ["rice", "noodle"],
+    "category_keywords": ["stir-fry", "thai dishes"],
+    "hero_ingredients": ["tamarind", "fish sauce", "peanut"],
+    "description": "Sweet-savory rice noodle stir-fry with tamarind, fish sauce, peanuts, and aromatics.",
+    "recipe_url": "https://hot-thai-kitchen.com/pad-thai/",
+    "serving_style": "Stir-fried main"
+  },
+  {
+    "name": "Tonkotsu Ramen",
+    "cuisine": "Japanese",
+    "aliases": ["rich pork ramen", "ramen"],
+    "ingredient_keywords": [
+      "pork broth",
+      "ramen noodle",
+      "soy sauce",
+      "miso",
+      "nori",
+      "egg",
+      "sesame"
+    ],
+    "required_terms": ["ramen"],
+    "category_keywords": ["noodle soup"],
+    "hero_ingredients": ["pork broth", "ramen noodle"],
+    "description": "Creamy pork bone broth ramen topped with noodles, egg, and aromatics.",
+    "recipe_url": "https://www.justonecookbook.com/tonkotsu-ramen/",
+    "serving_style": "Soup"
+  },
+  {
+    "name": "Guacamole",
+    "cuisine": "Mexican",
+    "aliases": ["avocado dip"],
+    "ingredient_keywords": [
+      "avocado",
+      "lime",
+      "cilantro",
+      "onion",
+      "jalapeno",
+      "tomato"
+    ],
+    "required_terms": ["avocado"],
+    "category_keywords": ["dip", "spread"],
+    "hero_ingredients": ["avocado", "lime"],
+    "description": "Chunky avocado dip seasoned with lime, cilantro, onion, and chili.",
+    "recipe_url": "https://www.simplyrecipes.com/recipes/perfect_guacamole/",
+    "serving_style": "Cold dip"
+  },
+  {
+    "name": "Hummus",
+    "cuisine": "Levantine",
+    "aliases": ["chickpea dip"],
+    "ingredient_keywords": [
+      "chickpea",
+      "tahini",
+      "lemon",
+      "garlic",
+      "olive oil",
+      "cumin"
+    ],
+    "required_terms": ["chickpea", "tahini"],
+    "category_keywords": ["dip", "spread"],
+    "hero_ingredients": ["chickpea", "tahini", "lemon"],
+    "description": "Creamy chickpea and tahini dip with lemon and garlic.",
+    "recipe_url": "https://www.seriouseats.com/best-hummus-recipe",
+    "serving_style": "Cold dip"
+  },
+  {
+    "name": "Chocolate Chip Cookies",
+    "cuisine": "American",
+    "aliases": ["choc chip cookie"],
+    "ingredient_keywords": [
+      "wheat flour",
+      "butter",
+      "brown sugar",
+      "chocolate",
+      "egg",
+      "vanilla",
+      "baking soda"
+    ],
+    "required_terms": ["chocolate", "cookie"],
+    "category_keywords": ["baked goods"],
+    "hero_ingredients": ["butter", "brown sugar", "chocolate"],
+    "description": "Chewy drop cookies packed with chocolate chips and caramelized sugar.",
+    "recipe_url": "https://www.nytimes.com/recipe/chocolate-chip-cookies",
+    "serving_style": "Baked dessert"
+  },
+  {
+    "name": "Greek Yogurt Parfait",
+    "cuisine": "Mediterranean",
+    "aliases": ["fruit parfait"],
+    "ingredient_keywords": [
+      "greek yogurt",
+      "honey",
+      "granola",
+      "berry",
+      "almond",
+      "chia"
+    ],
+    "required_terms": ["yogurt"],
+    "category_keywords": ["breakfast", "snack"],
+    "hero_ingredients": ["greek yogurt", "honey", "berries"],
+    "description": "Layered breakfast parfait built with strained yogurt, fruit, honey, and crunchy toppings.",
+    "recipe_url": "https://www.loveandlemons.com/yogurt-parfait/",
+    "serving_style": "Cold breakfast"
+  }
+]

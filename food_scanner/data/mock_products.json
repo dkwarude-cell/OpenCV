@@ -1,0 +1,95 @@
+{
+  "0123456789012": {
+    "product_name": "Example Cola Zero",
+    "brands": "Example Brand",
+    "code": "0123456789012",
+    "quantity": "330 ml",
+    "categories": "Beverages, Carbonated drinks, Sodas, Diet sodas",
+    "image_url": null,
+    "ingredients_text": "Carbonated Water, Caramel Color (E150d), Phosphoric Acid (E338), Sweeteners (Aspartame E951, Acesulfame K E950), Natural Flavors, Caffeine, Sodium Benzoate (E211)",
+    "nutriments": {
+      "energy-kcal_100g": 0.4,
+      "energy_100g": 1.7,
+      "fat_100g": 0,
+      "saturated-fat_100g": 0,
+      "trans-fat_100g": 0,
+      "carbohydrates_100g": 0,
+      "sugars_100g": 0,
+      "sugars_added_100g": 0,
+      "fiber_100g": 0,
+      "proteins_100g": 0,
+      "salt_100g": 0.02,
+      "sodium_100g": 0.008,
+      "energy-kcal_serving": 1.32,
+      "fat_serving": 0,
+      "carbohydrates_serving": 0,
+      "sugars_serving": 0,
+      "proteins_serving": 0,
+      "salt_serving": 0.066,
+      "sodium_serving": 0.026
+    },
+    "additives_tags": [
+      "en:e150d",
+      "en:e338",
+      "en:e951",
+      "en:e950",
+      "en:e211"
+    ],
+    "nova_group": 4,
+    "packaging": "Bottle, Plastic",
+    "serving_size": "330 ml (1 bottle)",
+    "status": 1
+  },
+  "1111111111111": {
+    "product_name": "Example Orange Juice",
+    "brands": "Fresh Farms",
+    "code": "1111111111111",
+    "quantity": "1 liter",
+    "categories": "Beverages, Fruit juices, Orange juices",
+    "image_url": null,
+    "ingredients_text": "100% Orange Juice from concentrate, Vitamin C (Ascorbic Acid)",
+    "nutriments": {
+      "energy-kcal_100g": 45,
+      "fat_100g": 0.1,
+      "saturated-fat_100g": 0,
+      "carbohydrates_100g": 10.4,
+      "sugars_100g": 8.4,
+      "fiber_100g": 0.2,
+      "proteins_100g": 0.7,
+      "salt_100g": 0,
+      "sodium_100g": 0
+    },
+    "additives_tags": [
+      "en:e300"
+    ],
+    "nova_group": 3,
+    "packaging": "Carton, Tetra Pak",
+    "status": 1
+  },
+  "2222222222222": {
+    "product_name": "Example Chocolate Bar",
+    "brands": "Sweet Delights",
+    "code": "2222222222222",
+    "quantity": "100g",
+    "categories": "Snacks, Confectionery, Chocolate",
+    "image_url": null,
+    "ingredients_text": "Sugar, Cocoa Butter, Cocoa Mass, Milk Powder, Emulsifier (Soy Lecithin E322), Vanilla Extract",
+    "nutriments": {
+      "energy-kcal_100g": 545,
+      "fat_100g": 31,
+      "saturated-fat_100g": 19,
+      "carbohydrates_100g": 56,
+      "sugars_100g": 52,
+      "fiber_100g": 2,
+      "proteins_100g": 6,
+      "salt_100g": 0.1,
+      "sodium_100g": 0.04
+    },
+    "additives_tags": [
+      "en:e322"
+    ],
+    "nova_group": 4,
+    "packaging": "Wrapper, Foil",
+    "status": 1
+  }
+}
