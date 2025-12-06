@@ -9,6 +9,7 @@ A Python application that scans barcodes on food packages using OpenCV and retur
 - 🥗 **Nutrition Information**: Detailed nutrient breakdown per 100g/100ml and per serving
 - ⚠️ **Additive Analysis**: E-number identification with concern level mapping
 - 🍽 **Dish Insights**: Ingredient mapping to likely dishes with quick recipe references
+- 🌐 **REST API**: FastAPI endpoints for product lookup and dish detection
 - 🏭 **Processing Level**: Ultra-processed food detection
 - 💾 **Smart Caching**: SQLite-based caching to reduce API calls
 - 🌐 **Streamlit Web UI**: Modern, responsive web interface
@@ -81,6 +82,22 @@ Features:
 - Manual barcode entry for testing
 - Toggle between per-100g and per-100ml view
 - Expand additives and ingredients sections
+
+### API Server
+
+Launch the REST API (FastAPI + Uvicorn):
+
+```bash
+python -m uvicorn api:app --app-dir src --host 0.0.0.0 --port 8000 --reload
+```
+
+Key endpoints:
+
+- `GET /health` – liveness check
+- `GET /product/{barcode}` – barcode lookup with additives and dish insight
+- `GET /search?q=term` – name-based search via OpenFoodFacts
+- `POST /dish-detect` – match a dish from freeform ingredients (JSON body: `ingredients_text`, optional `name`, `categories`)
+- `POST /scan-image` – upload an image with a barcode; returns detected barcode and product info
 
 ### Command Line Interface
 
