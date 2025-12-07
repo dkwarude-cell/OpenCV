@@ -2,11 +2,13 @@
 
 from __future__ import annotations
 
+import os
 from typing import Any, Dict, Optional
 
 import cv2
 import numpy as np
 from fastapi import FastAPI, HTTPException, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from additives import AdditivesAnalyzer
@@ -15,6 +17,15 @@ from product_lookup import ProductLookup
 from utils import ProductInfo
 
 app = FastAPI(title="Food Scanner API", version="1.0.0")
+
+# CORS middleware for cross-origin requests
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, specify your frontend domain
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Singletons reused across requests
 _lookup = ProductLookup()
@@ -26,6 +37,22 @@ class DishDetectRequest(BaseModel):
     name: Optional[str] = Field(None, description="Dish or product name")
     ingredients_text: str = Field(..., description="Ingredient list or recipe text")
     categories: Optional[str] = Field(None, description="Category hints, comma-separated")
+
+
+@app.get("/")
+async def root() -> Dict[str, Any]:
+    return {
+        "message": "Food Scanner API",
+        "version": "1.0.0",
+        "endpoints": {
+            "health": "GET /health",
+            "product": "GET /product/{barcode}",
+            "search": "GET /search?q=term",
+            "dish_detect": "POST /dish-detect",
+            "scan_image": "POST /scan-image"
+        },
+        "docs": "/docs"
+    }
 
 
 @app.get("/health")
@@ -123,5 +150,6 @@ def _dish_to_dict(dish) -> Dict[str, Any]:
 
 if __name__ == "__main__":
     import uvicorn
-
-    uvicorn.run("api:app", host="0.0.0.0", port=8000, reload=False)
+    
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("api:app", host="0.0.0.0", port=port, reload=False)
