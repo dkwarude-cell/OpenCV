@@ -28,92 +28,331 @@ from utils import ProductInfo, format_nutrient_value, generate_html_report
 
 # Page configuration
 st.set_page_config(
-    page_title="Food Barcode Scanner",
-    page_icon="🥗",
+    page_title="Food Scanner Pro - Smart Nutrition Analysis",
+    page_icon="🔍",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS
+# Professional White UI/UX Theme
 st.markdown("""
 <style>
-    .main {
-        padding: 1rem;
+    /* Clean white foundation */
+    .stApp {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
     }
+    
+    .main {
+        padding: 2rem 3rem;
+        background-color: transparent !important;
+    }
+    
+    .block-container {
+        padding: 3rem 2rem;
+        max-width: 1400px;
+        background-color: transparent !important;
+    }
+    
+    /* All content areas - Pure white */
+    section.main > div,
+    [data-testid="stVerticalBlock"],
+    [data-testid="stVerticalBlock"] > div,
+    [data-testid="column"] {
+        background-color: #ffffff !important;
+    }
+    
+    /* Professional header */
+    .stApp header {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    
+    /* Modern sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #fafafa !important;
+        border-right: 1px solid #e0e0e0;
+    }
+    
+    [data-testid="stSidebar"] h1, 
+    [data-testid="stSidebar"] h2, 
+    [data-testid="stSidebar"] h3 {
+        color: #1a1a1a !important;
+        font-weight: 600;
+    }
+    
+    /* Elegant tabs */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
+        background-color: #ffffff;
+        padding: 8px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
+    
     .stTabs [data-baseweb="tab"] {
-        padding: 8px 16px;
-        border-radius: 4px;
+        padding: 12px 24px;
+        border-radius: 8px;
+        background-color: #f5f5f5;
+        color: #666666;
+        border: none;
+        font-weight: 500;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
+    
+    .stTabs [data-baseweb="tab"]:hover {
+        background-color: #e8e8e8;
+        color: #1a1a1a;
+        transform: translateY(-1px);
+    }
+    
+    .stTabs [aria-selected="true"] {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+        color: white !important;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    
+    /* Premium buttons */
+    .stButton > button {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+        color: white !important;
+        border: none !important;
+        font-weight: 600;
+        border-radius: 10px;
+        padding: 0.75rem 2rem;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        letter-spacing: 0.3px;
+    }
+    
+    .stButton > button:hover {
+        background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
+        box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        transform: translateY(-2px);
+    }
+    
+    button[kind="primary"] {
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    }
+    
+    /* Refined tables */
     .nutrient-table {
         width: 100%;
-        border-collapse: collapse;
+        border-collapse: separate;
+        border-spacing: 0;
+        background-color: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
-    .nutrient-table th, .nutrient-table td {
-        padding: 8px 12px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
+    
     .nutrient-table th {
-        background-color: #4CAF50;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
         color: white;
+        padding: 16px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
     }
+    
+    .nutrient-table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #f0f0f0;
+        color: #333333;
+    }
+    
+    .nutrient-table tr:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .nutrient-table tr:last-child td {
+        border-bottom: none;
+    }
+    
+    /* Modern badges */
     .badge {
         display: inline-block;
-        padding: 4px 8px;
-        border-radius: 4px;
+        padding: 6px 14px;
+        border-radius: 20px;
         font-size: 0.85em;
-        font-weight: 500;
-        margin: 2px;
+        font-weight: 600;
+        margin: 3px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+    
     .badge-high {
-        background-color: #f44336;
+        background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
         color: white;
     }
+    
     .badge-moderate {
-        background-color: #ff9800;
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
         color: white;
     }
+    
     .badge-minimal {
-        background-color: #8bc34a;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
         color: white;
     }
+    
     .badge-low {
-        background-color: #9e9e9e;
+        background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
         color: white;
     }
+    
+    /* Product card design */
     .product-header {
         display: flex;
         align-items: flex-start;
-        gap: 20px;
-        margin-bottom: 20px;
+        gap: 24px;
+        padding: 28px;
+        background-color: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        margin-bottom: 28px;
+        border-left: 4px solid #2563eb;
     }
+    
     .product-image {
-        max-width: 150px;
+        max-width: 160px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border: 2px solid #f0f0f0;
+    }
+    
+    /* Processing level badges */
+    .processing-badge {
+        padding: 8px 16px;
+        border-radius: 24px;
+        font-weight: 600;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    
+    .processing-ultra {
+        background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        color: white;
+    }
+    
+    .processing-high {
+        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        color: white;
+    }
+    
+    .processing-moderate {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+    }
+    
+    .processing-minimal {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+    }
+    
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+        color: #1a1a1a !important;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+    
+    p, label, span, div {
+        color: #333333 !important;
+    }
+    
+    /* Premium expander */
+    .streamlit-expanderHeader {
+        background-color: #f8f9fa !important;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        color: #1a1a1a !important;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+    
+    .streamlit-expanderHeader:hover {
+        background-color: #e8e8e8 !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    
+    /* Metrics styling */
+    [data-testid="stMetricValue"] {
+        color: #2563eb !important;
+        font-weight: 700;
+    }
+    
+    /* Alert boxes */
+    .stAlert {
+        background-color: #f0f9ff !important;
+        border-left: 4px solid #2563eb;
         border-radius: 8px;
     }
-    .processing-badge {
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-weight: 500;
+    
+    /* File uploader - Clean white */
+    [data-testid="stFileUploader"],
+    [data-testid="stFileUploader"] section,
+    [data-testid="stFileUploader"] > div,
+    [data-testid="stFileUploaderDropzone"],
+    [data-testid="stFileUploaderDropzoneInput"],
+    .uploadedFile {
+        background-color: #ffffff !important;
     }
-    .processing-ultra {
-        background-color: #f44336;
-        color: white;
+    
+    [data-testid="stFileUploader"] {
+        border: 2px dashed #d0d0d0;
+        border-radius: 16px;
+        padding: 32px;
+        transition: all 0.3s ease;
     }
-    .processing-high {
-        background-color: #ff9800;
-        color: white;
+    
+    [data-testid="stFileUploader"]:hover {
+        border-color: #2563eb;
+        box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
     }
-    .processing-moderate {
-        background-color: #ffeb3b;
-        color: black;
+    
+    /* Camera input */
+    [data-testid="stCameraInput"],
+    [data-testid="stCameraInput"] > div {
+        background-color: #ffffff !important;
+        border-radius: 12px;
     }
-    .processing-minimal {
-        background-color: #8bc34a;
-        color: white;
+    
+    /* Image display */
+    [data-testid="stImage"] {
+        background-color: #ffffff !important;
+        border-radius: 12px;
+    }
+    
+    /* Form inputs */
+    input, textarea {
+        background-color: #ffffff !important;
+        border: 2px solid #e0e0e0 !important;
+        border-radius: 8px !important;
+        color: #1a1a1a !important;
+        padding: 10px 14px !important;
+        transition: all 0.3s ease;
+    }
+    
+    input:focus, textarea:focus {
+        border-color: #2563eb !important;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+    }
+    
+    /* Select boxes */
+    [data-baseweb="select"] {
+        background-color: #ffffff !important;
+        border-radius: 8px;
+    }
+    
+    /* Cards and containers */
+    .element-container {
+        background-color: #ffffff !important;
+    }
+    
+    /* Radio buttons */
+    [data-testid="stRadio"] > div {
+        background-color: #ffffff;
+        padding: 12px;
+        border-radius: 10px;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -178,8 +417,8 @@ def render_sidebar():
         # Scan history
         st.subheader("📜 Recent Scans")
         if st.session_state.scan_history:
-            for item in reversed(st.session_state.scan_history[-5:]):
-                if st.button(f"{item['name'][:25]}...", key=f"hist_{item['barcode']}"):
+            for idx, item in enumerate(reversed(st.session_state.scan_history[-5:])):
+                if st.button(f"{item['name'][:25]}...", key=f"hist_{idx}_{item['barcode']}"):
                     lookup_barcode(item['barcode'])
         else:
             st.caption("No recent scans")
@@ -999,9 +1238,17 @@ def main():
     # Initialize session state
     init_session_state()
     
-    # Title
-    st.title("🥗 Food Barcode Scanner")
-    st.markdown("Scan food barcodes to get nutrition and additive information")
+    # Professional Header
+    st.markdown("""
+    <div style='text-align: center; padding: 2rem 0; margin-bottom: 2rem;'>
+        <h1 style='font-size: 3rem; margin-bottom: 0.5rem; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;'>
+            🔍 Food Scanner Pro
+        </h1>
+        <p style='font-size: 1.2rem; color: #666; margin-top: 0;'>
+            Smart Nutrition Analysis & Barcode Intelligence
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     
     # Render sidebar
     render_sidebar()
