@@ -37,10 +37,29 @@ st.set_page_config(
 # Custom CSS - Government Green & White Theme
 st.markdown("""
 <style>
-    /* Main background - White */
+    /* Force white background everywhere */
+    .stApp {
+        background-color: #ffffff !important;
+    }
+    
     .main {
         padding: 1rem;
-        background-color: #ffffff;
+        background-color: #ffffff !important;
+    }
+    
+    .block-container {
+        background-color: #ffffff !important;
+        padding-top: 2rem;
+    }
+    
+    /* Main content area - Force white */
+    section.main > div {
+        background-color: #ffffff !important;
+    }
+    
+    /* Camera/Image upload sections - White background */
+    [data-testid="stVerticalBlock"] {
+        background-color: #ffffff !important;
     }
     
     /* Header styling - Government Green */
@@ -50,12 +69,16 @@ st.markdown("""
     
     /* Sidebar - Light Green */
     [data-testid="stSidebar"] {
-        background-color: #f0f7ed;
+        background-color: #f0f7ed !important;
         border-right: 3px solid #2d5016;
     }
     
-    [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
-        color: #2d5016;
+    [data-testid="stSidebar"] h1, 
+    [data-testid="stSidebar"] h2, 
+    [data-testid="stSidebar"] h3,
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] p {
+        color: #2d5016 !important;
     }
     
     /* Tabs - Green theme */
@@ -82,14 +105,20 @@ st.markdown("""
     
     /* Buttons - Government Green */
     .stButton > button {
-        background-color: #2d5016;
-        color: white;
-        border: 2px solid #2d5016;
+        background-color: #2d5016 !important;
+        color: white !important;
+        border: 2px solid #2d5016 !important;
         font-weight: 600;
     }
     .stButton > button:hover {
-        background-color: #4d7c2c;
-        border-color: #4d7c2c;
+        background-color: #4d7c2c !important;
+        border-color: #4d7c2c !important;
+    }
+    
+    /* Camera button specific */
+    button[kind="primary"] {
+        background-color: #2d5016 !important;
+        color: white !important;
     }
     
     /* Tables - Green headers */
@@ -178,6 +207,60 @@ st.markdown("""
         color: white;
     }
     
+    /* Headings - Government Green */
+    h1, h2, h3, h4, h5, h6 {
+        color: #2d5016 !important;
+    }
+    
+    /* Text color - Dark for readability */
+    p, label, span {
+        color: #1a1a1a !important;
+    }
+    
+    /* Expander - Green borders */
+    .streamlit-expanderHeader {
+        background-color: #f0f7ed !important;
+        border: 1px solid #2d5016;
+        border-radius: 4px;
+        color: #2d5016 !important;
+    }
+    
+    /* Metrics - Green accents */
+    [data-testid="stMetricValue"] {
+        color: #2d5016 !important;
+    }
+    
+    /* Info boxes */
+    .stAlert {
+        background-color: #f0f7ed !important;
+        border-left: 4px solid #2d5016;
+    }
+    
+    /* File uploader */
+    [data-testid="stFileUploader"] {
+        background-color: #ffffff !important;
+        border: 2px dashed #2d5016;
+        border-radius: 8px;
+    }
+    
+    /* Camera input */
+    [data-testid="stCameraInput"] {
+        background-color: #ffffff !important;
+    }
+    
+    /* Text inputs */
+    input, textarea {
+        background-color: #ffffff !important;
+        border: 1px solid #2d5016 !important;
+        color: #1a1a1a !important;
+    }
+    
+    /* Select boxes */
+    [data-baseweb="select"] {
+        background-color: #ffffff !important;
+    }
+</style>
+""", unsafe_allow_html=True)
     /* Headings - Government Green */
     h1, h2, h3 {
         color: #2d5016 !important;
