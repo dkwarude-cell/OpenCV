@@ -259,29 +259,48 @@ st.markdown("""
     [data-baseweb="select"] {
         background-color: #ffffff !important;
     }
-</style>
-""", unsafe_allow_html=True)
+    
     /* Headings - Government Green */
-    h1, h2, h3 {
+    h1, h2, h3, h4, h5, h6 {
         color: #2d5016 !important;
     }
     
     /* Expander - Green borders */
     .streamlit-expanderHeader {
-        background-color: #f0f7ed;
+        background-color: #f0f7ed !important;
         border: 1px solid #2d5016;
         border-radius: 4px;
+        color: #2d5016 !important;
     }
     
     /* Metrics - Green accents */
     [data-testid="stMetricValue"] {
-        color: #2d5016;
+        color: #2d5016 !important;
     }
     
     /* Info boxes */
     .stAlert {
-        background-color: #f0f7ed;
+        background-color: #f0f7ed !important;
         border-left: 4px solid #2d5016;
+    }
+    
+    /* File uploader */
+    [data-testid="stFileUploader"] {
+        background-color: #ffffff !important;
+        border: 2px dashed #2d5016;
+        border-radius: 8px;
+    }
+    
+    /* Camera input */
+    [data-testid="stCameraInput"] {
+        background-color: #ffffff !important;
+    }
+    
+    /* Text inputs */
+    input, textarea {
+        background-color: #ffffff !important;
+        border: 1px solid #2d5016 !important;
+        color: #1a1a1a !important;
     }
 </style>
 """, unsafe_allow_html=True)
