@@ -358,6 +358,87 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
+def handle_api_request():
+    """Handle API requests via URL query parameters."""
+    try:
+        query_params = st.query_params
+        
+        # Check if this is an API request
+        if "api" in query_params:
+            api_endpoint = query_params.get("api", "")
+            
+            # Initialize lookup if needed
+            if "lookup" not in st.session_state:
+                st.session_state.lookup = ProductLookup()
+            
+            if api_endpoint == "health":
+                st.json({"status": "healthy", "version": "1.0.0", "message": "Food Scanner API is running"})
+                st.stop()
+                
+            elif api_endpoint == "product":
+                barcode = query_params.get("barcode", "")
+                if barcode:
+                    product = st.session_state.lookup.get_product(barcode)
+                    if product and product.name != "Product Not Found":
+                        result = {
+                            "status": "success",
+                            "barcode": barcode,
+                            "name": product.name,
+                            "brand": product.brand,
+                            "categories": product.categories,
+                            "ingredients": product.ingredients_text,
+                            "nutrients": {
+                                "energy_kcal": product.energy_kcal,
+                                "proteins": product.proteins,
+                                "carbohydrates": product.carbohydrates,
+                                "sugars": product.sugars,
+                                "fat": product.fat,
+                                "saturated_fat": product.saturated_fat,
+                                "fiber": product.fiber,
+                                "sodium": product.sodium,
+                                "salt": product.salt,
+                            },
+                            "nova_group": product.nova_group,
+                            "nutriscore": product.nutriscore_grade,
+                            "image_url": product.image_url,
+                        }
+                        st.json(result)
+                    else:
+                        st.json({"status": "error", "message": "Product not found", "barcode": barcode})
+                else:
+                    st.json({"status": "error", "message": "Barcode parameter required. Use: ?api=product&barcode=XXX"})
+                st.stop()
+                
+            elif api_endpoint == "search":
+                query = query_params.get("q", "")
+                if query:
+                    results = st.session_state.lookup.search_products(query, page_size=10)
+                    st.json({
+                        "status": "success",
+                        "query": query,
+                        "count": len(results),
+                        "results": [{"barcode": r.get("code"), "name": r.get("product_name"), "brand": r.get("brands")} for r in results]
+                    })
+                else:
+                    st.json({"status": "error", "message": "Query parameter 'q' required. Use: ?api=search&q=product+name"})
+                st.stop()
+            
+            else:
+                st.json({
+                    "status": "error",
+                    "message": "Unknown API endpoint",
+                    "available_endpoints": {
+                        "health": "?api=health",
+                        "product": "?api=product&barcode=XXX",
+                        "search": "?api=search&q=product+name"
+                    }
+                })
+                st.stop()
+    except Exception as e:
+        st.json({"status": "error", "message": str(e)})
+        st.stop()
+
+
 def init_session_state():
     """Initialize session state variables."""
     if "decoder" not in st.session_state:
@@ -1235,6 +1316,9 @@ def render_footer():
 
 def main():
     """Main application entry point."""
+    # Handle API requests first (before any UI rendering)
+    handle_api_request()
+    
     # Initialize session state
     init_session_state()
     
@@ -1249,6 +1333,57 @@ def main():
         </p>
     </div>
     """, unsafe_allow_html=True)
+    
+    # API Info Box
+    with st.expander("🔗 API Integration - Click to expand"):
+        st.markdown("""
+        ### REST API Built-In!
+        
+        This app now includes API endpoints accessible via URL parameters. Perfect for integrating with other apps, mobile devices, or automation tools.
+        
+        **Available Endpoints:**
+        
+        1. **Health Check**
+           ```
+           http://localhost:8502/?api=health
+           ```
+        
+        2. **Get Product Info**
+           ```
+           http://localhost:8502/?api=product&barcode=8902080104581
+           ```
+        
+        3. **Search Products**
+           ```
+           http://localhost:8502/?api=search&q=coca+cola
+           ```
+        
+        **Usage Examples:**
+        
+        **Python:**
+        ```python
+        import requests
+        
+        # Get product
+        response = requests.get('http://localhost:8502/?api=product&barcode=8902080104581')
+        data = response.json()
+        print(data['name'])
+        ```
+        
+        **JavaScript:**
+        ```javascript
+        fetch('http://localhost:8502/?api=search&q=nutella')
+            .then(r => r.json())
+            .then(data => console.log(data.results));
+        ```
+        
+        **cURL:**
+        ```bash
+        curl "http://localhost:8502/?api=product&barcode=8902080104581"
+        ```
+        
+        **Mobile Apps:** Use the same URLs in Android/iOS HTTP clients!
+        """)
     
     # Render sidebar
     render_sidebar()
