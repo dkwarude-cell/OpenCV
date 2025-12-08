@@ -28,8 +28,8 @@ from utils import ProductInfo, format_nutrient_value, generate_html_report
 
 # Page configuration
 st.set_page_config(
-    page_title="Food Barcode Scanner",
-    page_icon="🥗",
+    page_title="Food Scanner - Government Portal",
+    page_icon="🍃",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -39,17 +39,18 @@ st.markdown("""
 <style>
     /* Force white background everywhere */
     .stApp {
-        background-color: #ffffff !important;
+        background-color: #f8faf9 !important;
     }
     
     .main {
-        padding: 1rem;
-        background-color: #ffffff !important;
+        padding: 2rem 1rem;
+        background-color: #f8faf9 !important;
     }
     
     .block-container {
-        background-color: #ffffff !important;
+        background-color: #f8faf9 !important;
         padding-top: 2rem;
+        max-width: 1200px;
     }
     
     /* Main content area - Force white */
@@ -83,24 +84,30 @@ st.markdown("""
     
     /* Tabs - Green theme */
     .stTabs [data-baseweb="tab-list"] {
-        gap: 8px;
-        background-color: #f0f7ed;
-        padding: 8px;
-        border-radius: 4px;
+        gap: 12px;
+        background-color: #ffffff;
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
     .stTabs [data-baseweb="tab"] {
-        padding: 8px 16px;
-        border-radius: 4px;
-        background-color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 6px;
+        background-color: #f8faf9;
         color: #2d5016;
-        border: 1px solid #4d7c2c;
+        border: 2px solid transparent;
+        font-weight: 500;
+        transition: all 0.2s ease;
     }
     .stTabs [data-baseweb="tab"]:hover {
         background-color: #e8f5e8;
+        border-color: #4d7c2c;
     }
     .stTabs [aria-selected="true"] {
         background-color: #2d5016 !important;
         color: white !important;
+        border-color: #2d5016 !important;
+        box-shadow: 0 2px 4px rgba(45, 80, 22, 0.3);
     }
     
     /* Buttons - Government Green */
@@ -109,10 +116,16 @@ st.markdown("""
         color: white !important;
         border: 2px solid #2d5016 !important;
         font-weight: 600;
+        border-radius: 6px;
+        padding: 0.5rem 1.5rem;
+        box-shadow: 0 2px 4px rgba(45, 80, 22, 0.2);
+        transition: all 0.3s ease;
     }
     .stButton > button:hover {
         background-color: #4d7c2c !important;
         border-color: #4d7c2c !important;
+        box-shadow: 0 4px 8px rgba(45, 80, 22, 0.3);
+        transform: translateY(-1px);
     }
     
     /* Camera button specific */
@@ -172,16 +185,18 @@ st.markdown("""
         display: flex;
         align-items: flex-start;
         gap: 20px;
-        margin-bottom: 20px;
-        padding: 15px;
-        background-color: #f0f7ed;
-        border-left: 4px solid #2d5016;
-        border-radius: 4px;
+        margin-bottom: 24px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-left: 5px solid #2d5016;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
     .product-image {
         max-width: 150px;
         border-radius: 8px;
         border: 2px solid #2d5016;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     
     /* Processing badges - Green scale */
