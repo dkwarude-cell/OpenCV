@@ -34,86 +34,171 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS
+# Custom CSS - Government Green & White Theme
 st.markdown("""
 <style>
+    /* Main background - White */
     .main {
         padding: 1rem;
+        background-color: #ffffff;
     }
+    
+    /* Header styling - Government Green */
+    .stApp header {
+        background-color: #2d5016 !important;
+    }
+    
+    /* Sidebar - Light Green */
+    [data-testid="stSidebar"] {
+        background-color: #f0f7ed;
+        border-right: 3px solid #2d5016;
+    }
+    
+    [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
+        color: #2d5016;
+    }
+    
+    /* Tabs - Green theme */
     .stTabs [data-baseweb="tab-list"] {
         gap: 8px;
+        background-color: #f0f7ed;
+        padding: 8px;
+        border-radius: 4px;
     }
     .stTabs [data-baseweb="tab"] {
         padding: 8px 16px;
         border-radius: 4px;
+        background-color: #ffffff;
+        color: #2d5016;
+        border: 1px solid #4d7c2c;
     }
+    .stTabs [data-baseweb="tab"]:hover {
+        background-color: #e8f5e8;
+    }
+    .stTabs [aria-selected="true"] {
+        background-color: #2d5016 !important;
+        color: white !important;
+    }
+    
+    /* Buttons - Government Green */
+    .stButton > button {
+        background-color: #2d5016;
+        color: white;
+        border: 2px solid #2d5016;
+        font-weight: 600;
+    }
+    .stButton > button:hover {
+        background-color: #4d7c2c;
+        border-color: #4d7c2c;
+    }
+    
+    /* Tables - Green headers */
     .nutrient-table {
         width: 100%;
         border-collapse: collapse;
+        background-color: white;
     }
     .nutrient-table th, .nutrient-table td {
-        padding: 8px 12px;
+        padding: 10px 12px;
         text-align: left;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #d4e8d0;
     }
     .nutrient-table th {
-        background-color: #4CAF50;
+        background-color: #2d5016;
         color: white;
+        font-weight: 600;
     }
+    .nutrient-table tr:nth-child(even) {
+        background-color: #f9fdf8;
+    }
+    
+    /* Badges - Green tones */
     .badge {
         display: inline-block;
-        padding: 4px 8px;
-        border-radius: 4px;
+        padding: 4px 12px;
+        border-radius: 20px;
         font-size: 0.85em;
-        font-weight: 500;
+        font-weight: 600;
         margin: 2px;
     }
     .badge-high {
-        background-color: #f44336;
+        background-color: #6b2c1d;
         color: white;
     }
     .badge-moderate {
-        background-color: #ff9800;
+        background-color: #8b6914;
         color: white;
     }
     .badge-minimal {
-        background-color: #8bc34a;
+        background-color: #2d5016;
         color: white;
     }
     .badge-low {
-        background-color: #9e9e9e;
+        background-color: #6e7d69;
         color: white;
     }
+    
+    /* Product sections */
     .product-header {
         display: flex;
         align-items: flex-start;
         gap: 20px;
         margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f0f7ed;
+        border-left: 4px solid #2d5016;
+        border-radius: 4px;
     }
     .product-image {
         max-width: 150px;
         border-radius: 8px;
+        border: 2px solid #2d5016;
     }
+    
+    /* Processing badges - Green scale */
     .processing-badge {
         padding: 6px 12px;
         border-radius: 20px;
-        font-weight: 500;
+        font-weight: 600;
     }
     .processing-ultra {
-        background-color: #f44336;
+        background-color: #6b2c1d;
         color: white;
     }
     .processing-high {
-        background-color: #ff9800;
+        background-color: #8b6914;
         color: white;
     }
     .processing-moderate {
-        background-color: #ffeb3b;
-        color: black;
+        background-color: #7d9f5b;
+        color: white;
     }
     .processing-minimal {
-        background-color: #8bc34a;
+        background-color: #2d5016;
         color: white;
+    }
+    
+    /* Headings - Government Green */
+    h1, h2, h3 {
+        color: #2d5016 !important;
+    }
+    
+    /* Expander - Green borders */
+    .streamlit-expanderHeader {
+        background-color: #f0f7ed;
+        border: 1px solid #2d5016;
+        border-radius: 4px;
+    }
+    
+    /* Metrics - Green accents */
+    [data-testid="stMetricValue"] {
+        color: #2d5016;
+    }
+    
+    /* Info boxes */
+    .stAlert {
+        background-color: #f0f7ed;
+        border-left: 4px solid #2d5016;
     }
 </style>
 """, unsafe_allow_html=True)
